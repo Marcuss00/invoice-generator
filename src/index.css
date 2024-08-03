@@ -1,0 +1,72 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+
+
+/* General styles for the input field */
+input[type="date"] {
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1rem; /* Font size */
+  color: #4a5568; /* Text color */
+  width: 100%; /* Full width */
+  outline: none; /* Remove outline */
+}
+
+/* Placeholder styling */
+input[type="date"]::before {
+  content: attr(placeholder); /* Use the placeholder attribute as content */
+  color: #a0aec0; /* Placeholder text color */
+  display: block;
+}
+
+/* Remove the placeholder text when user focuses the input */
+input[type="date"]:focus::before {
+  content: '';
+}
+
+/* Hide the default date icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Style the inner elements */
+input[type="date"]::-webkit-datetime-edit {
+  color: #4a5568;
+  padding-left: 5px;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+  color: transparent;
+}
+
+/* Shorten the displayed date format (e.g., mm/dd/yy) */
+input[type="date"]::-webkit-datetime-edit-month-field:before {
+  content: attr(placeholder);
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field:before {
+  content: attr(placeholder);
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field:before {
+  content: attr(placeholder);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
