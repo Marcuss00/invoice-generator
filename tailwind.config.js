@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  build: {
-    rollupOptions: {
-      external: ['react-router-dom']
-    },
+  
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
