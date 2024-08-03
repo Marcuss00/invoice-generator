@@ -60,7 +60,7 @@ const Items = ( {global} ) => {
     doc.autoTable({
       head:[["name", "qty", 'price','total']],
       body:tableData, 
-      startY:800,
+      startY:80,
       styles:{fontsize:12, cellPadding:5},
       columnStyles:{
         0:{cellWidth:60},
